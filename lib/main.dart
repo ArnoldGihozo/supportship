@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
+import 'signUpScreen.dart';
+import 'loginScreen.dart';
 
 void main() {
-  runApp(MyApp());
-}
+  runApp(
+    MaterialApp(
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-  // This widget is the root of your application.
-  
-}
+      initialRoute: '/LogIn',
+      routes: {
+        '/LogIn': (context) => LogInScreen(),
+        '/SignUp':(context) => SignUpScreen(),
+        // '/Home': (context) => HomeScreen(),
+      },//routes
+    ),
+  ); // runApp
+}// main
 
