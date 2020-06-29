@@ -17,16 +17,17 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           IconButton(
-            icon: Icon(
-              Icons.home,
-              size: 38.0,
-            ),
+            icon: Icon( Icons.home,size: 38.0,),
+            color: Colors.black,
+            highlightColor: Colors.red,
+            focusColor: Colors.green,
+            splashColor: Colors.pink,
             onPressed: () {
               Icon(Icons.home, size: 38.0, color: Colors.grey);
 
               Navigator.pushReplacementNamed(context, '/Home');
             },
-            color: Colors.black,
+            
           ),
           IconButton(
             icon: Icon(
