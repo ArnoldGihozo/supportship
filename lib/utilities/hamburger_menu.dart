@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:supportship/screens/homePage.dart';
+import 'package:supportship/screens/loginScreen.dart';
+
 
 class HamburgerMenu extends StatefulWidget {
   _HamburgerMenuState createState() => _HamburgerMenuState();
@@ -37,7 +38,7 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomePage(),
+                    builder: (context) => LogInScreen(),
                   ),
                 ); // Na vigation
               },
@@ -53,7 +54,7 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomePage(),
+                    builder: (context) => LogInScreen(),
                   ),
                 ); // Na vigation
               },
@@ -69,7 +70,7 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomePage(),
+                    builder: (context) => LogInScreen(),
                   ),
                 ); // Na vigation
               },
@@ -85,7 +86,7 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomePage(),
+                    builder: (context) => LogInScreen(),
                   ),
                 ); // Na vigation
               },

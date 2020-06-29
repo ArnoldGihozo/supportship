@@ -1,30 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:supportship/screens/homePage.dart';
+
+
+import 'package:supportship/screens/loginScreen.dart';
+import 'package:supportship/screens/signUpScreen.dart';
 
 void main() {
-  runApp(MyApp());
-}
+  runApp(
+    MaterialApp(
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-     
-        title:("Supportship"),
-        theme: new ThemeData(
-          primarySwatch: Colors.blue,
-      ),
-      home: HomePage(),
-      
-
-      
-      
-      
-      
-    );
-    
-  }
-  // This widget is the root of your application.
-  
-}
+      initialRoute: '/LogIn',
+      routes: {
+        '/LogIn': (context) => LogInScreen(),
+        '/SignUp':(context) => SignUpScreen(),
+        // '/Home': (context) => HomeScreen(),
+      },//routes
+    ),
+  ); // runApp
+}// main
 
