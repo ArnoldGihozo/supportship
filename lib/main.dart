@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supportship/screens/homePage.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,7 +8,20 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    return MaterialApp(
+     
+        title:("Supportship"),
+        theme: new ThemeData(
+          primarySwatch: Colors.blue,
+      ),
+      home: HomePage(),
+      
+
+      
+      
+      
+      
+    );
     
   }
   // This widget is the root of your application.
