@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:supportship/screens/loginScreen.dart';
 
-
 class HamburgerMenu extends StatefulWidget {
   _HamburgerMenuState createState() => _HamburgerMenuState();
 }
@@ -12,25 +11,25 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
-        //height: 10,
         color: Colors.blue[100],
         child: new ListView(
           padding: EdgeInsets.only(bottom: 60),
           children: <Widget>[
             Container(
               height: 130,
-            child:DrawerHeader(
-              child: Text(
-                'Menu',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold),
+              child: DrawerHeader(
+                child: Text(
+                  'Menu',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold),
+                ),
+                decoration: BoxDecoration(
+                  
+                  color: Colors.blue,
+                ),
               ),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-            ),
             ),
             ListTile(
               leading: Icon(
@@ -38,7 +37,7 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
                 color: Colors.white,
               ),
               title: Text('Home'),
-               onTap: () => {Navigator.of(context).pop()},
+              onTap: () => {Navigator.of(context).pop()},
               // onTap: () {
               //   Navigator.push(
               //     context,
@@ -48,14 +47,13 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
               //   ); // Na vigation
               // },
             ),
-
             ListTile(
               leading: Icon(
                 Icons.forum,
                 color: Colors.white,
               ),
               title: Text('Forum'),
-               onTap: () => {Navigator.of(context).pop()},
+              onTap: () => {Navigator.of(context).pop()},
               // onTap: () {
               //   Navigator.push(
               //     context,
@@ -65,7 +63,6 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
               //   ); // Na vigation
               // },
             ),
-
             ListTile(
               leading: Icon(
                 Icons.group,
@@ -81,14 +78,13 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
                 ); // Na vigation
               },
             ),
-
             ListTile(
               leading: Icon(
                 Icons.work,
                 color: Colors.white,
               ),
               title: Text('Services'),
-               onTap: () => {Navigator.of(context).pop()},
+              onTap: () => {Navigator.of(context).pop()},
               // onTap: () {
               //   Navigator.push(
               //     context,
@@ -98,7 +94,6 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
               //   ); // Na vigation
               // },
             ),
-        
             ListTile(
               leading: Icon(
                 Icons.exit_to_app,
@@ -106,7 +101,6 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
               ),
               title: Text('Logout'),
               onTap: () => alertDialog(context),
-
             ),
           ],
         ),
@@ -138,18 +132,18 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
             child: Text(
               "Yes",
               style: TextStyle(
-                color: Color(0xffddac00),
+                color: Colors.blue,
                 fontWeight: FontWeight.bold,
               ),
             ),
             onPressed: () {
               logOff = true;
-              
-             Navigator.push(
-               context,
-               MaterialPageRoute(
+
+              Navigator.push(
+                context,
+                MaterialPageRoute(
                   builder: (context) => LogInScreen(),
-               ),
+                ),
               ); // Navigation
               print("final:");
               print(logOff);
