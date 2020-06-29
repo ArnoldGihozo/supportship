@@ -5,7 +5,7 @@ import 'package:supportship/utilities/constants.dart';
 import 'package:supportship/utilities/logo.dart';
 import 'package:supportship/utilities/myTextField.dart';
 
-import 'homePage.dart';
+import 'homeScreen.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -71,7 +71,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => HomePageScreen(),
+                            builder: (context) => HomeScreen(),
                           ),
                         ); // push
                       },

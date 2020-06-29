@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:supportship/utilities/hamburger_menu.dart';
+import 'package:supportship/utilities/myBottomNavigationBar.dart';
 
-class HomePageScreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
-  _HomePageScreenState createState() => _HomePageScreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomePageScreenState extends State<HomePageScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,8 +23,9 @@ class _HomePageScreenState extends State<HomePageScreen> {
         ),
       ),
       body: Center( 
-        child: Text('This is your HomePage page'),
+        child: Text('This is your Home Screen page'),
       ),
+      bottomNavigationBar: MyBottomNavigationBar(),
       
     
   
