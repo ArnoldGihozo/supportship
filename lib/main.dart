@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supportship/my_profile.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,10 +8,10 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    throw UnimplementedError();
+    return MaterialApp(
+      home: MyProfile(),
+    );
   }
   // This widget is the root of your application.
-  
-}
 
+}
