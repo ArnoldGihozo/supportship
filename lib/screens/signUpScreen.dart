@@ -5,6 +5,7 @@ import 'package:supportship/utilities/constants.dart';
 import 'package:supportship/utilities/logo.dart';
 import 'package:supportship/utilities/myTextField.dart';
 
+import 'homePage.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -24,7 +25,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
               children: <Widget>[
                 Container(
                   alignment: Alignment.bottomRight,
-                  child: Logo(radius: 50.0,),
+                  child: Logo(
+                    radius: 50.0,
+                  ),
                 ),
                 Container(
                   alignment: Alignment.bottomLeft,
@@ -47,9 +50,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   ),
                 ),
                 SizedBox(height: 60.0),
-                MyTextField(hintText: 'Username',icon: kPersonIcon,),
+                MyTextField(
+                  hintText: 'Username',
+                  icon: kPersonIcon,
+                ),
                 SizedBox(height: 40.0),
-                MyTextField(hintText: 'Bio',),
+                MyTextField(
+                  hintText: 'Bio',
+                ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 100.0),
                   child: Material(
@@ -58,7 +66,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     elevation: 3.0,
                     child: MaterialButton(
                       onPressed: () {
-                        //Implement registration functionality.
+                        //Adding Funciton to move to home page
+
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => HomePageScreen(),
+                          ),
+                        ); // push
                       },
                       minWidth: 200.0,
                       height: 42.0,
@@ -77,4 +92,3 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 }
-
