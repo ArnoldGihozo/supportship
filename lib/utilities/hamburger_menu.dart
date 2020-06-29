@@ -12,11 +12,14 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
   Widget build(BuildContext context) {
     return Drawer(
       child: Container(
+        //height: 10,
         color: Colors.blue[100],
         child: new ListView(
-          padding: EdgeInsets.only(bottom: 20),
+          padding: EdgeInsets.only(bottom: 60),
           children: <Widget>[
-            DrawerHeader(
+            Container(
+              height: 130,
+            child:DrawerHeader(
               child: Text(
                 'Menu',
                 style: TextStyle(
@@ -28,41 +31,44 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
                 color: Colors.blue,
               ),
             ),
+            ),
             ListTile(
               leading: Icon(
                 Icons.home,
                 color: Colors.white,
               ),
               title: Text('Home'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => LogInScreen(),
-                  ),
-                ); // Na vigation
-              },
+               onTap: () => {Navigator.of(context).pop()},
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //       builder: (context) => LogInScreen(),
+              //     ),
+              //   ); // Na vigation
+              // },
             ),
 
             ListTile(
               leading: Icon(
-                Icons.home,
+                Icons.forum,
                 color: Colors.white,
               ),
               title: Text('Forum'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => LogInScreen(),
-                  ),
-                ); // Na vigation
-              },
+               onTap: () => {Navigator.of(context).pop()},
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //       builder: (context) => LogInScreen(),
+              //     ),
+              //   ); // Na vigation
+              // },
             ),
 
             ListTile(
               leading: Icon(
-                Icons.home,
+                Icons.group,
                 color: Colors.white,
               ),
               title: Text('Student Groups'),
@@ -78,18 +84,19 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
 
             ListTile(
               leading: Icon(
-                Icons.home,
+                Icons.work,
                 color: Colors.white,
               ),
               title: Text('Services'),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => LogInScreen(),
-                  ),
-                ); // Na vigation
-              },
+               onTap: () => {Navigator.of(context).pop()},
+              // onTap: () {
+              //   Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //       builder: (context) => LogInScreen(),
+              //     ),
+              //   ); // Na vigation
+              // },
             ),
         
             ListTile(
@@ -137,13 +144,13 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
             ),
             onPressed: () {
               logOff = true;
-              Navigator.of(context).pop();
-             // Navigator.push(
-               // context,
-               // MaterialPageRoute(
-                  //builder: (context) => LoginScreen(),
-               // ),
-              //); // Navigation
+              
+             Navigator.push(
+               context,
+               MaterialPageRoute(
+                  builder: (context) => LogInScreen(),
+               ),
+              ); // Navigation
               print("final:");
               print(logOff);
             },
