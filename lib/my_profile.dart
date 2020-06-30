@@ -4,6 +4,7 @@ import 'package:supportship/Data/data_definitions.dart';
 import 'package:supportship/Components/circle_image.dart';
 import 'package:supportship/Components/public_history.dart';
 import 'package:supportship/Components/private_history.dart';
+import 'package:supportship/utilities/myBottomNavigationBar.dart';
 
 // This is the profile view for each user
 
@@ -70,6 +71,7 @@ class MyProfile extends StatelessWidget {
           ],
         ),
       ),
+      bottomNavigationBar: MyBottomNavigationBar(),
     );
   }
 }

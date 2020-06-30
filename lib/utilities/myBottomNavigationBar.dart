@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supportship/my_profile.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
   @override
@@ -17,7 +18,10 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           IconButton(
-            icon: Icon( Icons.home,size: 38.0,),
+            icon: Icon(
+              Icons.home,
+              size: 38.0,
+            ),
             color: Colors.black,
             highlightColor: Colors.red,
             focusColor: Colors.green,
@@ -27,9 +31,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
 
               Navigator.pushReplacementNamed(context, '/Home');
             },
-            
           ),
-           
           IconButton(
             icon: Icon(
               Icons.book,
@@ -41,10 +43,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             color: Colors.black,
           ),
           IconButton(
-            icon: Icon(
-              Icons.add_circle, 
-              size: 38.0
-              ),
+            icon: Icon(Icons.add_circle, size: 38.0),
             onPressed: () {
               Navigator.pushReplacementNamed(context, '/Home');
             },
@@ -70,9 +69,12 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             onPressed: () {
               Icon(Icons.home, size: 38.0, color: Colors.grey);
 
-              Navigator.pushReplacementNamed(context, '/Home');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MyProfile()),
+              );
             },
-           color: Colors.black,
+            color: Colors.black,
           ),
         ],
       ),
