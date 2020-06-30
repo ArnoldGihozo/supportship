@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-import 'logo.dart';
-import 'constants.dart';
+
+import 'package:supportship/utilities/constants.dart';
+import 'package:supportship/utilities/logo.dart';
+
 
 class LogInScreen extends StatefulWidget {
   @override
