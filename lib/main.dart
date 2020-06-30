@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:supportship/my_profile.dart';
 
+import 'package:supportship/screens/loginScreen.dart';
+import 'package:supportship/screens/signUpScreen.dart';
+import 'package:supportship/screens/homeScreen.dart';
+
 void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: MyProfile(),
-    );
-  }
-  // This widget is the root of your application.
-
-}
+  runApp(
+    MaterialApp(
+      initialRoute: '/LogIn',
+      routes: {
+        '/LogIn': (context) => LogInScreen(),
+        '/SignUp': (context) => SignUpScreen(),
+        '/Home': (context) => HomeScreen(),
+      }, //routes
+    ),
+  ); // runApp
+} // main
