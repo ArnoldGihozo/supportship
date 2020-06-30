@@ -65,7 +65,7 @@ class _LogInScreenState extends State<LogInScreen> with SingleTickerProviderStat
                   child: Text(
                     'SUPPORTSHIP',
                     style: TextStyle(
-                      fontFamily: 'MuseoModerno',
+                      fontFamily: 'Sriracha',
                       fontSize: 30.0,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
