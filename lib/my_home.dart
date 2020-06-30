@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+
 import 'package:supportship/my_post.dart';
 
-// User's home page
+// users home screen
 class MyHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return ListView.builder(
+      itemCount: 30,
+      itemBuilder: (context, index) {
+        return MyPost();
+      },
+    );
   }
 }

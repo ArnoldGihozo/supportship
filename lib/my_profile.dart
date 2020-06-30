@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:supportship/my_post.dart';
 import 'package:supportship/Data/data_definitions.dart';
 import 'package:supportship/Components/circle_image.dart';
 import 'package:supportship/Components/public_history.dart';
@@ -22,12 +21,12 @@ class MyProfile extends StatelessWidget {
       body: DefaultTabController(
         length: 2,
         child: CustomScrollView(
-          slivers: <Widget>[
+          slivers: [
             SliverAppBar(
               backgroundColor: Colors.white,
               expandedHeight: 350,
               flexibleSpace: Column(
-                children: <Widget>[
+                children: [
                   SizedBox(height: 20), // adds padding between each component
                   CircleImage(circleImageData: circleImageData),
                   Padding(
@@ -63,7 +62,7 @@ class MyProfile extends StatelessWidget {
             ),
             SliverFillRemaining(
                 child: TabBarView(
-              children: <Widget>[
+              children: [
                 MyPublicHistory(),
                 MyPrivateHistory(),
               ],
