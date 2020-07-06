@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:supportship/Data/data_definitions.dart';
 import 'package:supportship/Components/circle_image.dart';
+import 'package:supportship/utilities/myBottomNavigationBar.dart';
 
 final circleImageData =
     CircleImageData(size: 30.0, image: "https://picsum.photos/200");
@@ -9,6 +10,7 @@ final circleImageData =
 class MyPost extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+   
     return Card(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -57,5 +59,7 @@ class MyPost extends StatelessWidget {
         ],
       ),
     );
+    
   }
+  
 }

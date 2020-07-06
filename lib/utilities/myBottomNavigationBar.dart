@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supportship/my_post.dart';
 import 'package:supportship/my_profile.dart';
 
 class MyBottomNavigationBar extends StatefulWidget {
@@ -45,7 +46,10 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           IconButton(
             icon: Icon(Icons.add_circle, size: 38.0),
             onPressed: () {
-              Navigator.pushReplacementNamed(context, '/Home');
+               Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MyPost()),
+              );
             },
             color: Colors.black,
           ),
