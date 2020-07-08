@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:supportship/screens/signUpScreen.dart';
+import 'package:supportship/utilities/authentication.dart';
 
 import 'package:supportship/utilities/constants.dart';
 import 'package:supportship/utilities/logo.dart';
-
 
 class LogInScreen extends StatefulWidget {
   @override
   _LogInScreenState createState() => _LogInScreenState();
 }
 
-class _LogInScreenState extends State<LogInScreen> with SingleTickerProviderStateMixin{
-
+class _LogInScreenState extends State<LogInScreen>
+    with SingleTickerProviderStateMixin {
   AnimationController controller;
   @override
   void initState() {
@@ -23,16 +24,15 @@ class _LogInScreenState extends State<LogInScreen> with SingleTickerProviderStat
     controller = AnimationController(
       duration: Duration(seconds: 1),
       vsync: this,
-      upperBound:60,
+      upperBound: 60,
     );
 
     controller.forward();
     controller.addListener(() {
-      setState(() {
-      });
+      setState(() {});
       print(controller.value);
     });
-  }// initState
+  } // initState
 //
 //  @override
 //  void dispose() {
@@ -82,7 +82,6 @@ class _LogInScreenState extends State<LogInScreen> with SingleTickerProviderStat
                   fontSize: 15.0,
                   letterSpacing: 1.0,
                   color: Colors.white,
-
                 ),
               ),
               Divider(
@@ -95,15 +94,24 @@ class _LogInScreenState extends State<LogInScreen> with SingleTickerProviderStat
               Padding(
                 padding: EdgeInsets.only(top: 30.0),
                 child: SignInButton(
-
                   Buttons.Google,
                   padding:
-                  EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
+                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
                   text: "Sign in with Google",
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/SignUp');
+                  onPressed: () async {
+                    bool result = await authService.googleSignIn();
+                    if (!result) {
+                      print("auth failed");
+                    } else {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => SignUpScreen(),
+                        ),
+                      );
+                    }
                   },
                 ),
               ),
@@ -114,4 +122,3 @@ class _LogInScreenState extends State<LogInScreen> with SingleTickerProviderStat
     );
   }
 }
-
