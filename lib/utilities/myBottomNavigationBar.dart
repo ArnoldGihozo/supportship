@@ -67,7 +67,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             onPressed: () {
               Icon(Icons.home, size: 38.0, color: kIconColor);
 
-              Navigator.pushNamed(context, '/Profile');
+              Navigator.pushReplacementNamed(context, '/Profile');
             },
            color: kIconColor,
           ),
