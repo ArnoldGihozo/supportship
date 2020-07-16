@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
-
 import 'package:supportship/utilities/constants.dart';
 import 'package:supportship/utilities/logo.dart';
 
@@ -23,7 +22,7 @@ class _LogInScreenState extends State<LogInScreen> with SingleTickerProviderStat
     controller = AnimationController(
       duration: Duration(seconds: 1),
       vsync: this,
-      upperBound:60,
+      upperBound:90,
     );
 
     controller.forward();
@@ -43,7 +42,7 @@ class _LogInScreenState extends State<LogInScreen> with SingleTickerProviderStat
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: mainColor,
+      backgroundColor: kYellow,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -54,7 +53,7 @@ class _LogInScreenState extends State<LogInScreen> with SingleTickerProviderStat
                 child: Container(
                   margin: EdgeInsets.fromLTRB(0.0, 90.0, 0, 0),
                   child: Center(
-                    child: Logo(radius: controller.value),
+                    child: Logo(radius: controller.value, colour: kYellow),
                   ),
                 ),
               ),
@@ -67,11 +66,11 @@ class _LogInScreenState extends State<LogInScreen> with SingleTickerProviderStat
                   child: Text(
                     'SUPPORTSHIP',
                     style: TextStyle(
-                      fontFamily: 'Sriracha',
+                      fontFamily: fontBold,
                       fontSize: 30.0,
                       color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 2.0,
+//                      fontWeight: FontWeight.w700,
+                      letterSpacing: 4.0,
                     ),
                   ),
                 ),
@@ -79,26 +78,21 @@ class _LogInScreenState extends State<LogInScreen> with SingleTickerProviderStat
               Text(
                 'Connect To Support',
                 style: TextStyle(
+                  fontFamily: font,
                   fontSize: 15.0,
                   letterSpacing: 1.0,
                   color: Colors.white,
 
                 ),
               ),
-              Divider(
-                color: Colors.black26,
-                height: 10.0,
-              ),
               SizedBox(
                 height: 200.0,
               ),
               Padding(
-                padding: EdgeInsets.only(top: 30.0),
+                padding: EdgeInsets.only(bottom: 20.0),
                 child: SignInButton(
-
                   Buttons.Google,
-                  padding:
-                  EdgeInsets.symmetric(vertical: 10.0, horizontal: 15.0),
+                  padding: EdgeInsets.fromLTRB(35.0, 10.0, 10.0, 10.0),
                   text: "Sign in with Google",
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0)),
