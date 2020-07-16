@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:supportship/screens/loginScreen.dart';
 import 'package:rxdart/rxdart.dart';
 
 class AuthenticationService {
@@ -14,8 +12,7 @@ class AuthenticationService {
   // these are shared state widgets
   Stream<FirebaseUser> user; // firebaseuser
   Stream<Map<String, dynamic>> profile; // custom user data in firestore
-  PublishSubject loading =
-      PublishSubject(); // observable that we can push new values to on
+  PublishSubject loading = PublishSubject(); // observable that we can push new values to on
 
   //constructor
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:supportship/utilities/constants.dart';
+import 'package:supportship/utilities/myBottomNavigationBar.dart';
 import 'package:supportship/Data/data_definitions.dart';
 import 'package:supportship/Components/circle_image.dart';
 import 'package:supportship/Components/public_history.dart';
@@ -17,6 +18,7 @@ class MyProfile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('username'),
+        backgroundColor: kYellow,
         elevation: 0.0,
       ),
       body: DefaultTabController(
@@ -39,22 +41,23 @@ class MyProfile extends StatelessWidget {
                     ),
                   ),
                   FlatButton(
-                      color: Colors.blue,
+                      color: kPink,
                       textColor: Colors.white,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(18.0),
-                          side: BorderSide(color: Colors.blue)),
+                          side: BorderSide(color: kPink)),
                       onPressed: () {
                         print("button pressed");
                       },
-                      child: Text("message")),
+                      child: Text("message")
+                  ),
                 ],
               ),
               bottom: TabBar(
                 labelColor: Colors.white,
                 unselectedLabelColor: Colors.grey,
                 indicatorSize: TabBarIndicatorSize.tab,
-                indicator: BoxDecoration(color: Colors.blue),
+                indicator: BoxDecoration(color: kPink),
                 tabs: [
                   Tab(icon: Icon(Icons.history)),
                   Tab(icon: Icon(Icons.lock)),
@@ -71,7 +74,7 @@ class MyProfile extends StatelessWidget {
           ],
         ),
       ),
-      bottomNavigationBar: MyBottomNavigationBar(),
+      bottomNavigationBar:MyBottomNavigationBar(),
     );
   }
 }

@@ -38,7 +38,7 @@ flutter:
 
   uses-material-design: true
   assets:
-    - images/logo3.jpeg
+    - images/logo3.png
 
   fonts:
     - family: MuseoModerno
@@ -48,3 +48,19 @@ flutter:
     - family: Sriracha
       fonts:
         - asset: fonts/Sriracha-Regular.ttf
+
+    - family: LilyScriptOne
+      fonts:
+        - asset: fonts/LilyScriptOne-Regular.ttf
+
+    - family: HindMadurai
+      fonts:
+          - asset: fonts/HindMadurai-Regular.ttf
+
+    - family: HindMaduraiBold
+      fonts:
+        - asset: fonts/HindMaduraiB-Bold.ttf
+
+
+
+

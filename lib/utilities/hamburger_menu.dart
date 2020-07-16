@@ -37,15 +37,10 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
                 color: Colors.white,
               ),
               title: Text('Home'),
-              onTap: () => {Navigator.of(context).pop()},
-              // onTap: () {
-              //   Navigator.push(
-              //     context,
-              //     MaterialPageRoute(
-              //       builder: (context) => LogInScreen(),
-              //     ),
-              //   ); // Na vigation
-              // },
+              onTap: () {
+                Navigator.pushNamed(context, '/Home');
+
+              }//onTap,
             ),
             ListTile(
               leading: Icon(
@@ -70,13 +65,8 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
               ),
               title: Text('Student Groups'),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => LogInScreen(),
-                  ),
-                ); // Na vigation
-              },
+                Navigator.pushNamed(context, '/Faculty');
+              }
             ),
             ListTile(
               leading: Icon(
