@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'constants.dart';
+
 
 class MyBottomNavigationBar extends StatefulWidget {
   @override
@@ -12,43 +14,38 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
     return Container(
       height: 75,
       padding: EdgeInsets.only(top: 2, bottom: 30),
-      color: Colors.grey[100],
+      color: kYellow,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
           IconButton(
             icon: Icon( Icons.home,size: 38.0,),
-            color: Colors.black,
+            color: kIconColor,
             highlightColor: Colors.red,
             focusColor: Colors.green,
             splashColor: Colors.pink,
             onPressed: () {
-              Icon(Icons.home, size: 38.0, color: Colors.grey);
+//              Icon(Icons.home, size: 38.0, color: kIconColor);
 
               Navigator.pushReplacementNamed(context, '/Home');
             },
-            
           ),
-           
           IconButton(
             icon: Icon(
               Icons.book,
               size: 38.0,
             ),
             onPressed: () {
-              Navigator.pushReplacementNamed(context, '/Home');
+              Navigator.pushReplacementNamed(context, '/JournalPost');
             },
-            color: Colors.black,
+            color: kIconColor,
           ),
           IconButton(
-            icon: Icon(
-              Icons.add_circle, 
-              size: 38.0
-              ),
+            icon: Icon(Icons.add_circle, size: 38.0),
             onPressed: () {
-              Navigator.pushReplacementNamed(context, '/Home');
+              Navigator.pushReplacementNamed(context, '/RegularPost');
             },
-            color: Colors.black,
+            color: kIconColor,
           ),
           IconButton(
             icon: Icon(
@@ -56,11 +53,11 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
               size: 38.0,
             ),
             onPressed: () {
-              Icon(Icons.home, size: 38.0, color: Colors.grey);
+              Icon(Icons.home, size: 38.0, color:kIconColor);
 
-              Navigator.pushReplacementNamed(context, '/Home');
+              Navigator.pushNamed(context, '/Message');
             },
-            color: Colors.black,
+            color: kIconColor,
           ),
           IconButton(
             icon: Icon(
@@ -68,11 +65,11 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
               size: 38.0,
             ),
             onPressed: () {
-              Icon(Icons.home, size: 38.0, color: Colors.grey);
+              Icon(Icons.home, size: 38.0, color: kIconColor);
 
-              Navigator.pushReplacementNamed(context, '/Home');
+              Navigator.pushReplacementNamed(context, '/Profile');
             },
-           color: Colors.black,
+           color: kIconColor,
           ),
         ],
       ),

@@ -13,6 +13,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  firebase_core: ^0.4.0+9
+  firebase_analytics: ^5.0.2
+  firebase_auth: ^0.14.0+5
+  firebase_database: ^3.1.6
+  google_sign_in: ^4.5.1
+  rxdart: ^0.24.1
+  provider: ^4.2.0
+  cloud_firestore: ^0.13.7
+  
 
 
 
@@ -29,7 +38,7 @@ flutter:
 
   uses-material-design: true
   assets:
-    - images/logo3.jpeg
+    - images/logo3.png
 
   fonts:
     - family: MuseoModerno
@@ -39,3 +48,19 @@ flutter:
     - family: Sriracha
       fonts:
         - asset: fonts/Sriracha-Regular.ttf
+
+    - family: LilyScriptOne
+      fonts:
+        - asset: fonts/LilyScriptOne-Regular.ttf
+
+    - family: HindMadurai
+      fonts:
+          - asset: fonts/HindMadurai-Regular.ttf
+
+    - family: HindMaduraiBold
+      fonts:
+        - asset: fonts/HindMaduraiB-Bold.ttf
+
+
+
+
