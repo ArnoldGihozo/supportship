@@ -57,6 +57,7 @@ class AuthenticationService {
       //loading.add(false);
     } catch (e) {
       print("error logging in");
+      print(e.toString());
     }
   }
 
